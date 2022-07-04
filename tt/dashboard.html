@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TimeTable</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+
+<body>
+
+    <header>
+        <marquee behaviour="slide" direction="right"
+        <h2>Galgotias College Of Engineering And Technology,Knowledge Park 2,Greater Noida,Gautam Budh Nagar</h2>
+    </marquee>
+        <h3>TIMETABLE MANAGEMENT SYSTEM</h3>
+    
+    </header>
+    <footer>
+        <h4>&copy; copyright reserved,all rights reserved with GALGOTIA COLLEGE</h4>
+      </footer>
+    
+      <div class="btn">
+        <span class="fas fa-bars"></span>
+     </div>
+     <nav class="sidebar">
+        <div class="text">
+           Menu
+        </div>
+        <ul>
+           <li class="active"><a href="#">TimeTable</a></li>
+           <li>
+              <a href="#" class="feat-btn">Input
+              <span class="fas fa-caret-down first"></span>
+              </a>
+              <ul class="feat-show">
+                 <li><a href="INPUT/faculity_list.html">Faculty List</a></li>
+                 <li><a href="INPUT/subject_list.html">Subject List</a></li>
+                 <li><a href="INPUT/room_list.html">Room List</a></li>
+                 <li><a href="INPUT/course_list.html">Course</a></li>
+
+
+              </ul>
+           </li>
+           <li><a href="#">Mapping</a></li>
+           <li>
+              <a href="#" class="serv-btn">Report
+              <span class="fas fa-caret-down second"></span>
+              </a>
+              <ul class="serv-show">
+                 <li><a href="REPORT/class_timetable.html">Class TimeTable</a></li>
+                 <li><a href="REPORT/fac_timetable.html">Faculty TimeTable</a></li>
+                 <li><a href="REPORT/room.html">Room No.</a></li>
+
+              </ul>
+           </li>
+          
+        </ul>
+     </nav>
+     
+     <script>
+        $('.btn').click(function(){
+          $(this).toggleClass("click");
+          $('.sidebar').toggleClass("show");
+        });
+          $('.feat-btn').click(function(){
+            $('nav ul .feat-show').toggleClass("show");
+            $('nav ul .first').toggleClass("rotate");
+          });
+          $('.serv-btn').click(function(){
+            $('nav ul .serv-show').toggleClass("show1");
+            $('nav ul .second').toggleClass("rotate");
+          });
+          $('nav ul li').click(function(){
+            $(this).addClass("active").siblings().removeClass("active");
+          });
+     </script>
+   
+</body>
+</html>
